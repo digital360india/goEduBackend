@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
-const goalSchema = mongoose.Schema({
+const reviewSchema = mongoose.Schema({
     any: {}
+    // test: {
+    //     type: String,
+    //     required: [true, 'Please add a text value'],
+    // }
     // sch: {
     //     type: mongoose.Schema.Types.ObjectId,
     //     required: true,
@@ -16,4 +20,4 @@ const goalSchema = mongoose.Schema({
     strict: false
 })
 
-module.exports = (collection) => mongoose.model(collection, goalSchema);
+module.exports = (collection) => mongoose.model(collection, reviewSchema);

@@ -13,6 +13,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/getAllData", require('./routes/getData'))
+app.use("/api/forms", require('./routes/forms'))
+app.use("/api/reviews", require('./routes/reviews'))
+app.use("/api/users", require('./routes/users'))
 app.use(errorHandler);
 app.listen(port
     //     , () => {
