@@ -11,7 +11,9 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
-
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+  });
 app.use("/api/getAllData", require('./routes/getData'))
 app.use("/api/forms", require('./routes/forms'))
 app.use("/api/reviews", require('./routes/reviews'))
